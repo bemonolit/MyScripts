@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+#This script converts an IPv4 address into hexadecimal or decimal format.
+#Usefull for bypassing WAF filters and stuff like that ;-)
+#2019 - 4ndr34z
+
 import sys
 
 if len(sys.argv) < 3:
