@@ -14,19 +14,15 @@ if len(sys.argv) < 3:
 Format = sys.argv[1]
 
 def long(ip):
-   #IP = sys.argv[2]
    IP = ip.split('.')
    IP = list(map(int, IP))
    LongIP = IP[0]*2**24 + IP[1]*2**16 + IP[2]*2**8 + IP[3]
    return LongIP
 
+ip = long(sys.argv[2])
+
 if Format == 'D':
-   Lip = long(sys.argv[2])
-   print('\nIP as Decimal format:')
-   print(Lip)
+   print('\nIP as Decimal format: %s' % (ip))
 
 if Format == 'H':
-   Hip = long(sys.argv[2])
-   Hip = hex(Hip)
-   print('\nIP as Hexadecimal format:')
-   print(Hip)
+   print('\nIP as Hexadecimal format: %s' % (hex(ip)))
