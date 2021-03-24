@@ -40,7 +40,7 @@ def run_john(wordlists):
     f.close()
     for x in wordlists:
         print('Running wordlist: ' + x +' \n')
-        os.system('john ' + hash + ' -w=' + wordlist_Path + x + ' --rules:' + rules + '--format:' + format)
+        os.system('john ' + hash + ' -w=' + wordlist_Path + x + ' --rules:' + rules + ' --format:' + format)
 
 def wordlists(path):
     mylist = os.listdir(path)
