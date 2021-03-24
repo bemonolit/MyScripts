@@ -6,6 +6,7 @@ from sqlite3 import Error
 
 wordlist_Path = "/Users/andreas/Documents/scripts/wordlists/"
 responderdb_Path = "./Responder.db"
+format = "netntlmv2"
 rules = "Jumbo"
 hash = "hash.txt"
 
@@ -39,7 +40,7 @@ def run_john(wordlists):
     f.close()
     for x in wordlists:
         print('Running wordlist: ' + x +' \n')
-        os.system('john ' + hash + ' -w=' + wordlist_Path + x + ' --rules:' + rules)
+        os.system('john ' + hash + ' -w=' + wordlist_Path + x + ' --rules:' + rules + '--format:' + format)
 
 def wordlists(path):
     mylist = os.listdir(path)
